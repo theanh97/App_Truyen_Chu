@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             app:layout_anchorGravity="center"
+                                             android:orientation="vertical">
+
+  <ImageView
+      android:layout_width="30dp"
+      android:layout_height="30dp"
+      android:src="@android:drawable/ic_menu_add"
+      android:id="@+id/imageView2"/>
+
+  <ImageView
+      android:layout_width="30dp"
+      app:layout_constraintRight_toLeftOf="parent"
+      android:layout_height="30dp"
+      android:src="@android:drawable/ic_menu_add"
+      android:id="@+id/imageView"/>
+
+  <TextView
+      android:id="@+id/tv_title"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:gravity="center"
+      android:text="dsfsdfdsfds"
+      android:textAlignment="center"
+      app:layout_constraintEnd_toStartOf="@+id/imageView"
+      android:layout_marginEnd="8dp"
+      app:layout_constraintStart_toEndOf="@+id/imageView2"
+      android:layout_marginStart="8dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      android:layout_marginBottom="8dp"
+      app:layout_constraintTop_toTopOf="parent"
+      android:layout_marginTop="8dp"/>
+</android.support.constraint.ConstraintLayout>

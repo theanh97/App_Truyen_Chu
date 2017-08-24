@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/list_chapters_background"
+    tools:context="com.theanhdev97.truyenchu.View.TruyenInformationActivity">
+
+  <android.support.v7.widget.Toolbar
+      android:id="@+id/tool_bar_truyen_information"
+      android:layout_width="match_parent"
+      android:layout_height="?attr/actionBarSize"
+      android:background="@color/list_chapters_toolbar_toolbar_background">
+
+    <TextView
+        android:id="@+id/tv_toolbar_title_truyen_information"
+        style="@style/toolbar_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="55dp"
+        android:maxLines="1"/>
+  </android.support.v7.widget.Toolbar>
+
+  <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_above="@+id/navigation_truyen_information"
+      android:layout_below="@+id/tool_bar_truyen_information">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+      <!-- INFO -->
+      <RelativeLayout
+          android:id="@+id/relative_layout_1"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="15dp"
+            >
+
+          <ImageView
+              android:id="@+id/imv_image_truyen_information"
+              android:layout_width="130dp"
+              android:layout_height="190dp"/>
+
+          <TextView
+              android:id="@+id/tv_title_truyen_information"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_toRightOf="@+id/imv_image_truyen_information"
+              android:lineSpacingExtra="2dp"
+              android:paddingBottom="3dp"
+              android:paddingLeft="5dp"
+              android:paddingRight="5dp"
+              android:textColor="@color/list_truyen_by_type_row_text"
+              android:textSize="15sp"
+              android:textStyle="bold"/>
+
+          <TextView
+              android:id="@+id/tv_author_truyen_information"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_below="@id/tv_title_truyen_information"
+              android:layout_toRightOf="@id/imv_image_truyen_information"
+              android:padding="4dp"
+              android:textColor="@color/list_truyen_by_type_row_text"/>
+
+          <TextView
+              android:id="@+id/tv_rating_truyen_information"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_below="@id/tv_author_truyen_information"
+              android:layout_toRightOf="@id/imv_image_truyen_information"
+              android:padding="4dp"
+              android:textColor="@color/list_truyen_by_type_row_text"/>
+
+          <TextView
+              android:id="@+id/tv_max_chapter_truyen_information"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_below="@id/tv_rating_truyen_information"
+              android:layout_toRightOf="@id/imv_image_truyen_information"
+              android:padding="4dp"
+              android:textColor="@color/list_truyen_by_type_row_text"/>
+
+          <TextView
+              android:id="@+id/tv_status_truyen_information"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_below="@id/tv_max_chapter_truyen_information"
+              android:layout_toRightOf="@id/imv_image_truyen_information"
+              android:padding="4dp"
+              android:textColor="@color/list_truyen_by_type_row_text"/>
+
+        </RelativeLayout>
+      </RelativeLayout>
+
+      <!-- DESCRIPTION -->
+
+      <com.ms.square.android.expandabletextview.ExpandableTextView
+          android:id="@+id/expandable_description"
+          xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:expandableTextView="http://schemas.android.com/apk/res-auto"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/relative_layout_1"
+          expandableTextView:animDuration="600"
+          expandableTextView:maxCollapsedLines="9">
+
+        <TextView
+            android:id="@id/expandable_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="7dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="15dp"
+            android:textColor="@color/list_chapters_text"
+            android:textSize="19sp"/>
+
+        <ImageButton
+            android:id="@id/expand_collapse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:background="@android:color/transparent"
+            android:padding="16dp"
+            android:src="@drawable/book"/>
+      </com.ms.square.android.expandabletextview.ExpandableTextView>
+
+    </RelativeLayout>
+  </ScrollView>
+
+  <android.support.design.widget.BottomNavigationView
+      android:id="@+id/navigation_truyen_information"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      android:background="@color/bottom_navigation_background"
+      app:itemBackground="@drawable/ripple_effect"
+      app:itemIconTint="@drawable/background_item_2"
+      app:itemTextColor="@drawable/background_item_2"
+      app:menu="@menu/menu_truyen_information_navigation">
+  </android.support.design.widget.BottomNavigationView>
+
+</RelativeLayout>

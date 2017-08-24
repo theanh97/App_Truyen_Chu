@@ -1,0 +1,46 @@
+<resources>
+  <string name="app_name">Truyện Chữ</string>
+  <string name="app_id">com.theanhdev97.truyenchu260697</string>
+
+  <!-- List Chapters -->
+  <string name="list_chapters_toolbar_title">Danh sách chương</string>
+  <string name="list_chapters_inscrease_sort_menu">Tăng dần</string>
+  <string name="list_chapters_descrease_sort_menu">Giảm dần</string>
+  <string name="list_chapters_read_continue">Đọc tiếp</string>
+
+  <string-array name="font_styles">
+    <item>Palatino Linotype</item>
+    <item>Source Sans Pro</item>
+    <item>Segoe UI</item>
+    <item>Roboto</item>
+    <item>Patrick Hand</item>
+    <item>Times New Roman</item>
+    <item>Verdana</item>
+    <item>Tahoma</item>
+    <item>Arial</item>
+  </string-array>
+  <string-array name="font_styles_from_assets">
+    <item>pala.ttf</item>
+    <item>SourceSansPro-Regular.ttf</item>
+    <item>segoeui.ttf</item>
+    <item>Roboto-Regular.ttf</item>
+    <item>PatrickHand-Regular.ttf</item>
+    <item>times.ttf</item>
+    <item>verdana.ttf</item>
+    <item>tahoma.ttf</item>
+    <item>arial.ttf</item>
+  </string-array>
+
+  <!-- HOME ACTIVITY -->
+
+  <!-- INFORMATION DIALOG -->
+  <string name="information_dialog_title">Thông tin ứng dụng</string>
+  <string name="information_dialog_content">
+    Ứng dụng được phát triển bởi : Phạm Thế Anh
+    \n\n
+    Phiên bản : 1.0
+    \n\n
+    Đánh giá 5 sao cho app nhá !!!
+  </string>
+  <string name="information_dialog_button">OK</string>
+</resources>

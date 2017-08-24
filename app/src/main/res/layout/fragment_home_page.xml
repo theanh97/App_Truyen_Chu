@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+  <android.support.v4.widget.SwipeRefreshLayout
+      android:id="@+id/swipe_refresh_layout"
+      xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+
+      xmlns:tools="http://schemas.android.com/tools"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@drawable/progress_dialog_background">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="vertical">
+
+
+        <!-- Truyen HOT-->
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+
+          <TextView
+              android:id="@+id/tv_truyenhot_title"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="@color/list_chapters_toolbar_toolbar_background"
+              android:gravity="center"
+              android:padding="7dp"
+              android:text="Truyện hot"
+              android:textColor="@color/list_chapters_toolbar_title_text"
+              android:textSize="17sp"
+              app:layout_constraintBottom_toTopOf="@+id/rclv_list_truyen_hot"
+              app:layout_constraintTop_toTopOf="parent"
+              tools:ignore="MissingConstraints"
+              tools:layout_editor_absoluteX="0dp"
+              />
+
+          <Button
+              android:id="@+id/btn_view_all_truyen_hot"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentRight="true"
+              android:background="@drawable/ripple_effect"
+              android:text=""
+              android:textColor="#64B5F6"
+              android:textStyle="bold"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintTop_toTopOf="parent"/>
+
+
+          <android.support.v7.widget.RecyclerView
+              android:id="@+id/rclv_list_truyen_hot"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              app:layout_constraintTop_toBottomOf="@+id/btn_view_all_truyen_hot"
+              tools:ignore="MissingConstraints"
+              tools:layout_editor_absoluteX="0dp">
+          </android.support.v7.widget.RecyclerView>
+        </android.support.constraint.ConstraintLayout>
+
+        <!-- Truyen HOAN THANH -->
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+
+          <TextView
+              android:id="@+id/tv_truyen_hoan_thanh_title"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="@color/list_chapters_toolbar_toolbar_background"
+              android:gravity="center"
+              android:padding="7dp"
+              android:text="Truyện hoàn thành"
+              android:textColor="@color/list_chapters_toolbar_title_text"
+              android:textSize="17sp"
+              app:layout_constraintBottom_toTopOf="@+id/rclv_list_truyen_hoan_thanh"
+              app:layout_constraintTop_toTopOf="parent"
+              tools:ignore="MissingConstraints"
+              tools:layout_editor_absoluteX="0dp"/>
+
+          <Button
+              android:id="@+id/btn_view_all_truyen_hoan_thanh"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentRight="true"
+              android:background="@drawable/ripple_effect"
+              android:text=""
+              android:textColor="#64B5F6"
+              android:textStyle="bold"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintTop_toTopOf="parent"/>
+
+
+          <android.support.v7.widget.RecyclerView
+              android:id="@+id/rclv_list_truyen_hoan_thanh"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              app:layout_constraintTop_toBottomOf="@+id/btn_view_all_truyen_hoan_thanh"
+              tools:ignore="MissingConstraints"
+              tools:layout_editor_absoluteX="0dp">
+          </android.support.v7.widget.RecyclerView>
+        </android.support.constraint.ConstraintLayout>
+
+        <!-- TRUYEN MOI -->
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+
+          <TextView
+              android:id="@+id/tv_truyen_moi_title"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="@color/list_chapters_toolbar_toolbar_background"
+              android:gravity="center"
+              android:padding="7dp"
+              android:text="Truyện mới"
+              android:textColor="@color/list_chapters_toolbar_title_text"
+              android:textSize="17sp"
+              app:layout_constraintBottom_toTopOf="@+id/rclv_list_truyen_moi"
+              app:layout_constraintTop_toTopOf="parent"
+              tools:ignore="MissingConstraints"
+              tools:layout_editor_absoluteX="0dp"
+              />
+
+          <Button
+              android:id="@+id/btn_view_all_truyen_moi"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentRight="true"
+              android:background="@drawable/ripple_effect"
+              android:text=""
+              android:textColor="#64B5F6"
+              android:textStyle="bold"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintTop_toTopOf="parent"/>
+
+
+          <android.support.v7.widget.RecyclerView
+              android:id="@+id/rclv_list_truyen_moi"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              app:layout_constraintTop_toBottomOf="@+id/btn_view_all_truyen_moi"
+              tools:ignore="MissingConstraints"
+              tools:layout_editor_absoluteX="0dp">
+          </android.support.v7.widget.RecyclerView>
+        </android.support.constraint.ConstraintLayout>
+
+
+      </LinearLayout>
+    </ScrollView>
+
+  </android.support.v4.widget.SwipeRefreshLayout>
+
+  <com.victor.loading.rotate.RotateLoading
+      android:id="@+id/progress_bar"
+      android:layout_width="60dp"
+      android:layout_height="60dp"
+      android:layout_centerInParent="true"/>
+</RelativeLayout>

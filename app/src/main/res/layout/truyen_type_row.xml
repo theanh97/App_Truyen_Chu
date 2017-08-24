@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/ripple_effect"
+              android:orientation="vertical">
+
+  <TextView
+      android:fontFamily="sans-serif"
+      android:id="@+id/tv_name"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:padding="10dp"
+      android:textColor="@color/list_chapters_text"
+      android:textSize="20sp"/>
+</LinearLayout>

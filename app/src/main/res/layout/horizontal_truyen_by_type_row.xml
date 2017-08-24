@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+  <LinearLayout
+      xmlns:android="http://schemas.android.com/apk/res/android"
+      android:background="@drawable/ripple_effect"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:gravity="center"
+      android:orientation="vertical"
+      android:padding="5dp">
+
+    <ImageView
+        android:id="@+id/imv_image_horizontal"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_title_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/text_view_max_height"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="2"
+        android:maxWidth="@dimen/text_view_max_length_per_line"
+        android:textColor="@color/list_chapters_text"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/tv_author_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="1"
+        android:maxWidth="@dimen/text_view_max_length_per_line"
+        android:textColor="#9E9E9E"/>
+  </LinearLayout>

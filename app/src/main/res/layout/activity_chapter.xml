@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+  <!--  CONTENT -->
+  <android.support.v4.widget.NestedScrollView
+      android:id="@+id/nested_scrollview"
+      xmlns:android="http://schemas.android.com/apk/res/android"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:clipToPadding="false"
+      android:scrollbarSize="4dp"
+      android:scrollbarThumbVertical="@android:color/darker_gray"
+      android:scrollbars="vertical"
+      app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+    <ScrollView
+        android:id="@+id/scv_chapter_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+      <TextView
+          android:id="@+id/tv_chapter_content"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:padding="15dp"
+          />
+    </ScrollView>
+
+
+  </android.support.v4.widget.NestedScrollView>
+  <!-- COLAPSING TOOLBAR -->
+  <android.support.design.widget.AppBarLayout
+      android:id="@+id/app_bar_layout"
+      android:layout_width="match_parent"
+
+      android:layout_height="wrap_content"
+      android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+
+
+    <android.support.design.widget.CollapsingToolbarLayout
+        android:id="@+id/collapsing_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        app:layout_scrollFlags="scroll|enterAlways">
+
+      <android.support.v7.widget.Toolbar
+          android:id="@+id/toolbar"
+          android:layout_width="match_parent"
+          android:layout_height="30dp"
+          android:alpha="0.8"
+          android:gravity="center"
+          app:layout_collapseMode="pin"
+          app:popupTheme="@style/ThemeOverlay.AppCompat.ActionBar">
+
+      </android.support.v7.widget.Toolbar>
+
+      <TextView
+          android:id="@+id/tv_toolbar_title"
+          style="@style/chapter_toolbar_title"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          />
+
+    </android.support.design.widget.CollapsingToolbarLayout>
+
+
+  </android.support.design.widget.AppBarLayout>
+
+
+  <!-- Bottom Sheet -->
+  <android.support.v4.widget.NestedScrollView
+      android:id="@+id/bottom_sheet_menu"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@color/chapter_bottom_sheet_background"
+      android:clipToPadding="true"
+      app:behavior_hideable="true"
+      app:behavior_peekHeight="0dp"
+      app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:weightSum="3">
+
+      <ImageButton
+          android:id="@+id/imb_list_chapters"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:background="@android:color/transparent"
+          android:baselineAligned="false"
+          android:orientation="vertical"
+          app:srcCompat="@drawable/menu_list_chapters_background"/>
+
+      <ImageButton
+          android:id="@+id/imb_light"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:background="@android:color/transparent"
+          app:srcCompat="@drawable/menu_light_setting_background"/>
+
+      <ImageButton
+          android:id="@+id/imb_text"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:background="@android:color/transparent"
+          app:srcCompat="@drawable/menu_text_setting_background"/>
+    </LinearLayout>
+
+  </android.support.v4.widget.NestedScrollView>
+
+  <!-- text setting -->
+  <android.support.v4.widget.NestedScrollView
+      android:id="@+id/bottom_sheet_text_setting"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@color/chapter_bottom_sheet_background"
+      android:clipToPadding="true"
+      app:behavior_hideable="true"
+      app:behavior_peekHeight="0dp"
+      app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+      <!-- Font style -->
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center_horizontal"
+          android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="6dp"
+            android:layout_weight="1"
+            android:text="Font chữ : "
+            android:textColor="@color/chapter_bottom_sheet_text"
+            android:textSize="18sp"
+            />
+
+        <Spinner
+            android:id="@+id/spn_text_font"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="3"
+            android:textAlignment="center"></Spinner>
+      </LinearLayout>
+      <!--  Text size -->
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="22dp"
+            android:text="Cỡ chữ : "
+            android:textColor="@color/chapter_bottom_sheet_text"
+            android:textSize="18sp"
+            />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp">
+
+          <ImageButton
+              android:id="@+id/imb_descrease_text_size"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="@android:color/transparent"
+              android:src="@drawable/minus_menu_background"/>
+
+          <TextView
+              android:id="@+id/tv_text_size"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_centerHorizontal="true"
+              android:textColor="@color/chapter_bottom_sheet_text"
+              android:textSize="18sp"
+              />
+
+          <ImageButton
+              android:id="@+id/imb_inscrease_text_size"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentRight="true"
+              android:background="@android:color/transparent"
+              android:src="@drawable/plus_menu_background"/>
+        </RelativeLayout>
+
+      </LinearLayout>
+
+
+      <!-- Khoảng cách dòng -->
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center"
+          android:orientation="horizontal"
+          android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:text="Dãn dòng : "
+            android:textColor="@color/chapter_bottom_sheet_text"
+            android:textSize="18sp"
+            />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp">
+
+          <ImageButton
+              android:id="@+id/imb_descrease_line_space"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="@android:color/transparent"
+              android:src="@drawable/minus_menu_background"/>
+
+          <TextView
+              android:id="@+id/tv_line_space_size"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_centerHorizontal="true"
+              android:text="20"
+              android:textColor="@color/chapter_bottom_sheet_text"
+              android:textSize="18sp"
+              />
+
+          <ImageButton
+              android:id="@+id/imb_inscrease_line_space"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentRight="true"
+              android:background="@android:color/transparent"
+              android:src="@drawable/plus_menu_background"/>
+        </RelativeLayout>
+      </LinearLayout>
+    </LinearLayout>
+  </android.support.v4.widget.NestedScrollView>
+
+  <!-- light setting -->
+  <android.support.v4.widget.NestedScrollView
+      android:id="@+id/bottom_sheet_light_setting"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@color/chapter_bottom_sheet_background"
+      android:clipToPadding="true"
+      app:behavior_hideable="true"
+      app:behavior_peekHeight="0dp"
+      app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+      <!-- Light level-->
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center_horizontal"
+          android:padding="10dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            app:srcCompat="@drawable/light_low"/>
+
+        <android.support.v7.widget.AppCompatSeekBar
+            android:id="@+id/sb_light_level"
+            style="@style/Base.Widget.AppCompat.SeekBar.Discrete"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:max="100"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            app:srcCompat="@drawable/light_high"
+            />
+      </RelativeLayout>
+
+      <!-- background color -->
+      <RadioGroup
+          android:id="@+id/group_rdb_background_color"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center"
+          android:orientation="horizontal"
+          android:padding="10dp">
+
+        <RadioButton
+            android:id="@+id/rdb_color_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/color_1_background"
+            android:button="@android:color/transparent"
+            />
+
+        <RadioButton
+            android:id="@+id/rdb_color_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+
+            android:background="@drawable/color_2_background"
+            android:button="@android:color/transparent"/>
+
+        <RadioButton
+            android:id="@+id/rdb_color_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:background="@drawable/color_3_background"
+            android:button="@android:color/transparent"/>
+
+        <RadioButton
+            android:id="@+id/rdb_color_4"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:background="@drawable/color_4_background"
+            android:button="@android:color/transparent"/>
+
+        <RadioButton
+            android:id="@+id/rdb_color_5"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:background="@drawable/color_5_background"
+            android:button="@android:color/transparent"/>
+
+        <RadioButton
+            android:id="@+id/rdb_color_6"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:background="@drawable/color_6_background"
+            android:button="@android:color/transparent"/>
+
+        <RadioButton
+            android:id="@+id/rdb_color_7"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:background="@drawable/color_7_background"
+            android:button="@android:color/transparent"/>
+
+        <RadioButton
+            android:id="@+id/rdb_color_8"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:background="@drawable/color_8_background"
+            android:button="@android:color/transparent"/>
+      </RadioGroup>
+
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:padding="10dp">
+
+        <TextView
+            android:id="@+id/tv_full_screen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/chapter_bottom_sheet_text"
+            android:layout_marginLeft="10dp"
+            android:text="Full màn hình : "
+            android:textSize="18sp"/>
+
+        <Switch
+            android:id="@+id/switch_full_screen"
+            style="@style/MySwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/tv_full_screen"
+            android:backgroundTint="@color/bottom_navigation_background"
+            android:textOff="Off"
+            android:textOn="On"/>
+      </RelativeLayout>
+
+    </LinearLayout>
+  </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>
+

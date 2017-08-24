@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/list_chapters_background"
+    tools:context="com.theanhdev97.truyenchu.View.SearchTruyenActivity">
+  <!-- TOOLBAR -->
+  <android.support.v7.widget.Toolbar
+      android:id="@+id/tool_bar"
+      android:layout_width="match_parent"
+      android:layout_height="?attr/actionBarSize"
+      android:background="@color/list_chapters_toolbar_toolbar_background"
+      android:gravity="center">
+
+    <EditText
+        android:drawableRight="@drawable/remove_text_icon"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingRight="10dp"
+        android:paddingLeft="25dp"
+        android:textColorHint="#7bbaed"
+        android:id="@+id/edt_search_truyen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/edittext_background"
+        android:hint="Tìm kiếm truyện"
+        android:textColor="@color/list_chapters_toolbar_toolbar_background"
+        android:textSize="16sp"/>
+  </android.support.v7.widget.Toolbar>
+
+  <android.support.v7.widget.RecyclerView
+      android:id="@+id/rclv_list_truyens_search"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_below="@+id/tool_bar"></android.support.v7.widget.RecyclerView>
+</RelativeLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/list_truyen_by_type_row_background"
+    tools:context="com.theanhdev97.truyenchu.View.ListChaptersActivity">
+
+  <android.support.v7.widget.Toolbar
+      android:id="@+id/tool_bar"
+      android:layout_width="match_parent"
+      android:layout_height="?attr/actionBarSize"
+      android:background="@color/list_chapters_toolbar_toolbar_background"
+      android:gravity="center">
+
+    <TextView
+        android:id="@+id/tv_toolbar_title"
+        style="@style/toolbar_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="55dp"/>
+  </android.support.v7.widget.Toolbar>
+
+  <android.support.v4.widget.SwipeRefreshLayout
+      android:id="@+id/swipe_refresh_layout"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_above="@+id/navigation"
+      android:layout_below="@+id/tool_bar">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rclv_list_truyen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+  </android.support.v4.widget.SwipeRefreshLayout>
+
+  <!-- NAVIGATION -->
+  <android.support.design.widget.BottomNavigationView
+      android:id="@+id/navigation"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      app:itemBackground="@drawable/ripple_effect"
+      android:background="@color/bottom_navigation_background"
+
+      app:itemIconTint="@drawable/background_item"
+      app:itemTextColor="@drawable/background_item"
+      app:menu="@menu/menu_list_truyen_by_type_navigation">
+  </android.support.design.widget.BottomNavigationView>
+</RelativeLayout>

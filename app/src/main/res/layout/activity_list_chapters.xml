@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/list_chapters_background"
+    android:orientation="vertical"
+    tools:context="com.theanhdev97.truyenchu.View.ListChaptersActivity">
+
+
+  <android.support.v7.widget.Toolbar
+      android:id="@+id/toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="?attr/actionBarSize"
+      android:background="@color/list_chapters_toolbar_toolbar_background"
+      android:gravity="center">
+
+    <TextView
+        style="@style/toolbar_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginRight="50dp"
+        android:text="@string/list_chapters_toolbar_title"
+        />
+  </android.support.v7.widget.Toolbar>
+
+
+  <RelativeLayout
+      android:layout_above="@id/nav"
+      android:layout_below="@id/toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+    <com.simplecityapps.recyclerview_fastscroll.views.FastScrollRecyclerView
+        android:id="@+id/rclv_list_chapters"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:fastScrollPopupBgColor="@color/colorAccent"
+        app:fastScrollPopupTextColor="@android:color/primary_text_dark"
+        app:fastScrollThumbColor="@color/bottom_navigation_item_selected"
+        tools:layout_editor_absoluteX="0dp"/>
+  </RelativeLayout>
+
+
+  <!--<android.support.v7.widget.RecyclerView-->
+  <!--android:id="@+id/rclv_list_chapters"-->
+  <!--android:layout_width="match_parent"-->
+  <!--android:layout_height="match_parent"-->
+  <!--android:layout_above="@+id/nav"-->
+  <!--android:layout_below="@id/toolbar"-->
+  <!--android:background="@color/list_chapters_background"-->
+  <!--/>-->
+
+  <!--<com.futuremind.recyclerviewfastscroll.FastScroller-->
+  <!--android:id="@+id/fastscroll"-->
+  <!--android:scrollbarStyle="outsideInset"-->
+  <!--android:scrollbarSize="10dp"-->
+  <!--android:layout_width="wrap_content"-->
+  <!--android:layout_height="match_parent"-->
+  <!--android:layout_above="@+id/nav"-->
+  <!--android:layout_alignParentRight="true"-->
+  <!--android:layout_below="@id/toolbar"-->
+  <!--android:orientation="vertical"/>-->
+
+
+  <android.support.design.widget.BottomNavigationView
+      android:id="@+id/nav"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      android:background="@color/bottom_navigation_background"
+      app:itemBackground="@drawable/ripple_effect"
+      app:itemIconTint="@color/bottom_navigation_item_selected"
+      app:itemTextColor="@color/bottom_navigation_item_selected"
+      app:menu="@menu/menu_list_chapters_navigation"
+      tools:layout_editor_absoluteX="8dp"
+      >
+  </android.support.design.widget.BottomNavigationView>
+
+</RelativeLayout>

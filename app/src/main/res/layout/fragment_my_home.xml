@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout
+    android:id="@+id/swipe_refresh_layout_my_home"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+  <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+      <!-- Truyen reading-->
+
+      <android.support.constraint.ConstraintLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:padding="5dp">
+
+        <TextView
+            android:id="@+id/tv_truyen_reading_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/list_chapters_toolbar_toolbar_background"
+            android:gravity="center"
+            android:padding="7dp"
+            android:text=""
+            android:textColor="@color/list_chapters_toolbar_title_text"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toTopOf="@+id/rclv_list_truyen_reading"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="0dp"
+            />
+
+        <Button
+            android:id="@+id/btn_view_all_truyen_reading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@android:color/transparent"
+            android:text=""
+            android:textColor="#64B5F6"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rclv_list_truyen_reading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/btn_view_all_truyen_reading"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="0dp">
+        </android.support.v7.widget.RecyclerView>
+      </android.support.constraint.ConstraintLayout>
+
+      <!-- Truyen Downloaded -->
+      <android.support.constraint.ConstraintLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+
+          android:padding="5dp">
+
+
+        <TextView
+            android:id="@+id/tv_truyen_downloaded_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/list_chapters_toolbar_toolbar_background"
+            android:gravity="center"
+            android:padding="7dp"
+            android:text=""
+            android:textColor="@color/list_chapters_toolbar_title_text"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toTopOf="@+id/rclv_list_truyen_downloaded"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="0dp"/>
+
+        <Button
+            android:id="@+id/btn_view_all_truyen_downloaded"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@android:color/transparent"
+            android:text=""
+            android:textColor="#64B5F6"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rclv_list_truyen_downloaded"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/btn_view_all_truyen_downloaded"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="0dp">
+        </android.support.v7.widget.RecyclerView>
+      </android.support.constraint.ConstraintLayout>
+    </LinearLayout>
+  </ScrollView>
+
+</android.support.v4.widget.SwipeRefreshLayout>

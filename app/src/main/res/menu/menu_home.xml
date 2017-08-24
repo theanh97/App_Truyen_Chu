@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+  <item
+      android:id="@+id/action_search"
+      android:enabled="true"
+      android:icon="@drawable/menu_search"
+      android:title="Tìm kiếm Truyện"
+      app:showAsAction="always"></item>
+  <item
+      android:id="@+id/action_if_room"
+      android:enabled="true"
+      android:icon="@drawable/menu_if_room"
+      android:title="if room"
+      app:showAsAction="always">
+    <menu>
+      <item
+          android:id="@+id/action_rate_app"
+          android:title="Đánh giá ứng dụng"></item>
+      <item
+          android:id="@+id/action_information_app"
+          android:title="Thông tin ứng dụng">
+      </item>
+
+    </menu>
+  </item>
+</menu>

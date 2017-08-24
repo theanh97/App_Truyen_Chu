@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <color name="colorPrimary">#3F51B5</color>
+  <color name="colorPrimaryDark">#303F9F</color>
+  <color name="colorAccent">#FF4081</color>
+
+  <color name="divier_color">#9E9E9E</color>
+  <color name="recycler_view_divider">#BBDEFB</color>
+
+  <!-- List Chapter -->
+  <color name="list_chapters_toolbar_title_text">#E3F2FD</color>
+  <color name="list_chapters_toolbar_toolbar_background">#2196F3</color>
+  <color name="list_chapters_text">#000000</color>
+  <color name="list_chapters_background">#FFFFFF</color>
+
+  <!-- List truyen by type -->
+  <color name="list_truyen_by_type_toolbar_title_text">#E3F2FD</color>
+  <color name="list_truyen_by_type_toolbar_background">#2196F3</color>
+  <color name="list_truyen_by_type_row_text">#000000</color>
+  <color name="list_truyen_by_type_row_background">#ffffff</color>
+
+  <!-- Chapter setting -->
+  <color name="color_1">#decf9f</color>
+  <color name="color_2">#f1e8c2</color>
+  <color name="color_3">#efeade</color>
+  <color name="color_4">#ddecdd</color>
+  <color name="color_5">#efdcdc</color>
+  <color name="color_6">#d5d5d5</color>
+  <color name="color_7">#2c2d2e</color>
+  <color name="color_8">#ffffff</color>
+
+  <array name="chapter_background">
+    <item>@color/color_1</item>
+    <item>@color/color_2</item>
+    <item>@color/color_3</item>
+    <item>@color/color_4</item>
+    <item>@color/color_5</item>
+    <item>@color/color_6</item>
+    <item>@color/color_7</item>
+    <item>@color/color_8</item>
+  </array>
+  <!-- Chapter -->
+  <color name="chapter_bottom_sheet_background">#009688</color>
+  <color name="chapter_bottom_sheet_icon_text">#E0F2F1</color>
+  <color name="chapter_bottom_sheet_text">#A7FFEB</color>
+
+
+  <!-- bottom navigation -->
+  <color name="bottom_navigation_item_normal">#959595</color>
+  <color name="bottom_navigation_item_selected">#FF0B8FF7</color>
+  <color name="bottom_navigation_background">#ffffff</color>
+</resources>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.theanhdev97.truyenchu"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+  <uses-permission android:name="android.permission.INTERNET"/>
+
+  <application
+      android:allowBackup="true"
+      android:hardwareAccelerated="true"
+      android:icon="@mipmap/ic_launcher"
+      android:label="@string/app_name"
+      android:largeHeap="true"
+      android:roundIcon="@mipmap/ic_launcher_round"
+      android:supportsRtl="true"
+      android:theme="@style/AppTheme">
+    <activity
+        android:name=".View.ListTruyenByTypeActivity"
+        android:screenOrientation="portrait"
+        android:theme="@style/Theme.AppCompat.NoActionBar">
+    </activity>
+    <activity
+        android:name=".View.TruyenInformationActivity"
+        android:screenOrientation="portrait"
+        android:theme="@style/Theme.AppCompat.NoActionBar"/>
+    <activity
+        android:name=".View.ListChaptersActivity"
+        android:screenOrientation="portrait"
+        android:theme="@style/Theme.AppCompat.NoActionBar"/>
+    <activity
+        android:name=".View.ChapterActivity"
+        android:configChanges="orientation|screenSize"
+        android:theme="@style/Theme.AppCompat.NoActionBar"/>
+    <activity
+        android:name=".View.HomeActivity"
+        android:configChanges="orientation|screenSize">
+
+    </activity>
+    <activity
+        android:name=".View.SearchTruyenActivity"
+        android:configChanges="orientation|screenSize"
+        android:theme="@style/Theme.AppCompat.NoActionBar"
+        android:windowSoftInputMode="adjustResize">
+    </activity>
+    <activity
+        android:name=".View.WaitingActivity"
+        android:configChanges="orientation|screenSize">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+
+        <category android:name="android.intent.category.LAUNCHER"/>
+      </intent-filter>
+    </activity>
+  </application>
+
+</manifest>
